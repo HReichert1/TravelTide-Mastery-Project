@@ -22,11 +22,6 @@ E-booking startup TravelTide is a new player in the online travel industry. It h
    - duration_stay: calculated in hours either from return_time and departure_time or check_in_time and check_out_time
    - add cancellation data to appropriate session_id
    - avg_days_to_cancellation using session_end of cancelled session and session_start
-   - segment_cancellation:
-     same-Day Cancellers
-     Last-Minute Cancellers (1-7 days)
-     Moderate Cancellers (8-30 days)
-     Early Cancellers (30+ days)
    - avg_session_duration: difference of session_end and session_start
    - cost_flight: using base_fare_usd taking into consideration seats and flight_discount_amount
    - cost_hotel: using hotel_per_room_usd taking into consideration nights and hotel_discount_amount
@@ -35,39 +30,39 @@ E-booking startup TravelTide is a new player in the online travel industry. It h
                      1 --> solo
    - avg_distance_miles using longitude and latitude information of home and destination airport and applying the Harvesine formula
    - segments used:
-     segment_age_group
-            16-24
-            25-34
-            35-44
-            45-54
-            55-64
-            65
-     segment_travel_frequency
-            frequent traveler (>= 5 bookings)
-            casual traveler
-     segment_spend
-            High spender, if total avg_cost > 7000 USD
-     segment_flight_distance
-            hort-haul-flyer (avg < 500 miles)
-            medium-haul-flyer (avg 500-2500 miles)
-            long-haul-flyer (avg > 2500 miles)
-     segment_booking_time
-            Last minute booker (< 7 days)
-            Early booker (7-60 days)
-            Moderate early booker (60-180 days)
-            Super early booker (> 180 days)
-     segment_cancellation
-            Same-Day Cancellers
-            Last-Minute Cancellers (1-7 days)
-            Moderate Cancellers (8-30 days)
-            Early Cancellers (30+ days)
-            No Cancellation
-    segment_travel_party
-            Solo traveler
-            Family/Group taveler
-            Solo and group traveler
-    segment_family: calculated from married and has_children
-            married, children
-            not married, children
-            married, no children
-            not married, no children
+     - segment_age_group
+            - 16-24
+            - 25-34
+            - 35-44
+            - 45-54
+            - 55-64
+            - 65
+     - segment_travel_frequency
+            - frequent traveler (>= 5 bookings)
+            - casual traveler
+     - segment_spend
+            - High spender, if total avg_cost > 7000 USD
+     - segment_flight_distance
+            - hort-haul-flyer (avg < 500 miles)
+            - medium-haul-flyer (avg 500-2500 miles)
+            - long-haul-flyer (avg > 2500 miles)
+     - segment_booking_time
+            - Last minute booker (< 7 days)
+            - Early booker (7-60 days)
+            - Moderate early booker (60-180 days)
+            - Super early booker (> 180 days)
+     - segment_cancellation
+            - Same-Day Cancellers
+            - Last-Minute Cancellers (1-7 days)
+            - Moderate Cancellers (8-30 days)
+            - Early Cancellers (30+ days)
+            - No Cancellation
+    - segment_travel_party
+            - Solo traveler
+            - Family/Group taveler
+            - Solo and group traveler
+    - segment_family: calculated from married and has_children
+            - married, children
+            - not married, children
+            - married, no children
+            - not married, no children
