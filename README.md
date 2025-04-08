@@ -6,8 +6,10 @@ E-booking startup TravelTide is a new player in the online travel industry. It h
 5 different perks have to be assigned to customers:
  - Free hotel meal
  - free checked bag
- - no cncellation fees
+ - no cancellation fees
  - exclusive discounts
  - 1 night free hotel with flight
 
 # Planning
+data exploration and finding groups which can be assigned for a perk
+![image](https://github.com/user-attachments/assets/e5a58f3f-682f-4f2d-8704-d3c0ddc5c589)
