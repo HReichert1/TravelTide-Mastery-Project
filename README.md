@@ -66,3 +66,8 @@ E-booking startup TravelTide is a new player in the online travel industry. It h
             - not married, children
             - married, no children
             - not married, no children
+
+ 3. Decision Tree
+
+    ![image](https://github.com/user-attachments/assets/7b919734-5acd-4404-acc3-31ae3dde1844)
+
