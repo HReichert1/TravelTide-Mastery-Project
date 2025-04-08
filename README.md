@@ -14,7 +14,7 @@ E-booking startup TravelTide is a new player in the online travel industry. It h
 1. Data exploration and finding groups which can be assigned for a perk
 ![image](https://github.com/user-attachments/assets/e5a58f3f-682f-4f2d-8704-d3c0ddc5c589)
 
-2. Calculations and dat changes
+2. Calculations and data changes
    - re-calculation of the nights spent in a hotel without taking into consideration the time
      NULL values only for cancellation sessions nd hotel_booked = false
    - age: calculated base on birthdate and session_end
