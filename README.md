@@ -69,5 +69,4 @@ E-booking startup TravelTide is a new player in the online travel industry. It h
 
  3. Decision Tree
 
-    ![image](https://github.com/user-attachments/assets/7b919734-5acd-4404-acc3-31ae3dde1844)
-
+![image](https://github.com/user-attachments/assets/4fcddac7-32b6-4678-a4c1-82ec4fb29a0b)
