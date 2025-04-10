@@ -11,10 +11,65 @@ E-booking startup TravelTide is a new player in the online travel industry. It h
  - 1 night free hotel with flight
 
 # Planning
-**1. Data exploration and finding groups which can be assigned for a perk**
+
+**Workflow for assigning an individualized perk**
+
+**1. Identification of active users**
+Users with more than 7 sessions since January 4, 2023 
+Reduction of user data from more than 5 million to 5998
+
+**2. Segmentation of customers into groups**
+After analysis: 10 groups have been built
+![image](https://github.com/user-attachments/assets/7b9a328a-8afb-4baf-930a-c9c3d0ae8e73)
+Others include all travelers who could not be assigned to a specific group
+Metrics used for building the groups: session behaviour, trip behaviour, demographics
+
+
+**3. Data exploration and finding groups which can be assigned for a perk**
 ![image](https://github.com/user-attachments/assets/e5a58f3f-682f-4f2d-8704-d3c0ddc5c589)
 
-**2. Calculations and data changes**
+
+**Rule Set for User Group Creation**
+
+*segments used:*
+     - *segment_age_group*
+            - 16-24
+            - 25-34
+            - 35-44
+            - 45-54
+            - 55-64
+            - 65
+     - *segment_travel_frequency*
+            - frequent traveler (>= 5 bookings)
+            - casual traveler
+     - *segment_spend*
+            - High spender, if total avg_cost > 7000 USD
+     - *segment_flight_distance*
+            - hort-haul-flyer (avg < 500 miles)
+            - medium-haul-flyer (avg 500-2500 miles)
+            - long-haul-flyer (avg > 2500 miles)
+     - *segment_booking_time*
+            - Last minute booker (< 7 days)
+            - Early booker (7-60 days)
+            - Moderate early booker (60-180 days)
+            - Super early booker (> 180 days)
+     - *segment_cancellation*
+            - Same-Day Cancellers
+            - Last-Minute Cancellers (1-7 days)
+            - Moderate Cancellers (8-30 days)
+            - Early Cancellers (30+ days)
+            - No Cancellation
+             - *segment_travel_party*
+            - Solo traveler
+            - Family/Group taveler
+            - Solo and group traveler
+    - *segment_family* calculated from married and has_children
+            - married, children
+            - not married, children
+            - married, no children
+            - not married, no children
+            
+**4. Additional Calculations and data changes**
    - re-calculation of the nights spent in a hotel without taking into consideration the time
      NULL values only for cancellation sessions nd hotel_booked = false
    - age: calculated base on birthdate and session_end
@@ -29,7 +84,7 @@ E-booking startup TravelTide is a new player in the online travel industry. It h
    - travel_party: 100 --> group/family
                      1 --> solo
    - avg_distance_miles using longitude and latitude information of home and destination airport and applying the Harvesine formula
-   - segments used:
+*segments used:*
      - *segment_age_group*
             - 16-24
             - 25-34
@@ -67,11 +122,11 @@ E-booking startup TravelTide is a new player in the online travel industry. It h
             - married, no children
             - not married, no children
 
- **3. Decision Tree and Customer Group Assignment**
+ **5. Decision Tree and Customer Group Assignment**
 
 ![image](https://github.com/user-attachments/assets/4fcddac7-32b6-4678-a4c1-82ec4fb29a0b)
 
-**4. Perk Assignment**
+**6. Perk Assignment**
 | Customer Group | Perk | Why It Matters |
 |---------------------- | ---------------------- | ----------------------|
 |Mile Master (Long distance, frequent flyer) | Free Checked Bag | Encourages ongoing loyalty and reduces booking friction.|
@@ -85,8 +140,8 @@ E-booking startup TravelTide is a new player in the online travel industry. It h
 |Next-Gen Wanderer (age 16-24) | Free Hotel Meal | Young Travelers are Price Sensitive|
 |Business Traveler (Middle-Aged, Solo Traveler) | No Cancellation Fees | Business travelers value flexibility|
 
-# SQL code used in BeeKeeper
-`
+# SQL code used in BeeKeeper for creating CSV file for upload into Tableau
+```
 /*filter for sessions starting after 2023-01-04 and data corrections*/
 
 with session_filtered as (
@@ -475,7 +530,11 @@ user_based_perk as (
   from user_based_perk
   
   ;
-`
+```
+
+**CSV file:**
+[CSV file](https://drive.google.com/file/d/14r9UaHGrXYPqc8P2kjkjBbUzifPrAMW6/view?usp=drive_link)
+
 
 
 
