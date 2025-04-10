@@ -33,43 +33,17 @@ Metrics used for building the groups: session behaviour, trip behaviour, demogra
 
 
 *segments used:*
-     - *segment_age_group*
-            - 16-24
-            - 25-34
-            - 35-44
-            - 45-54
-            - 55-64
-            - 65
-     - *segment_travel_frequency*
-            - frequent traveler (>= 5 bookings)
-            - casual traveler
-     - *segment_spend*
-            - High spender, if total avg_cost > 7000 USD
-     - *segment_flight_distance*
-            - hort-haul-flyer (avg < 500 miles)
-            - medium-haul-flyer (avg 500-2500 miles)
-            - long-haul-flyer (avg > 2500 miles)
-     - *segment_booking_time*
-            - Last minute booker (< 7 days)
-            - Early booker (7-60 days)
-            - Moderate early booker (60-180 days)
-            - Super early booker (> 180 days)
-     - *segment_cancellation*
-            - Same-Day Cancellers
-            - Last-Minute Cancellers (1-7 days)
-            - Moderate Cancellers (8-30 days)
-            - Early Cancellers (30+ days)
-            - No Cancellation
-    - *segment_travel_party*
-            - Solo traveler
-            - Family/Group taveler
-            - Solo and group traveler
-    - *segment_family* calculated from married and has_children
-            - married, children
-            - not married, children
-            - married, no children
-            - not married, no children
-            
+|Segment | Characteristic|
+| ----------- | ----------- |
+|Age Group | 16-24, 25-34, 35-44, 45-54, 55-64, 65+ |
+|Travel Frequency | frequent traveler (>= 5 bookings), casual traveler (2-4 bookings), low-frequent traveller (1 booking) |
+|Spend | High spender (total cost > 7000 USD|
+|Flight Distance | short-haul-flyer (avg < 500 miles), medium-haul-flyer (avg 500-2500 miles), long-haul-flyer (avg > 2500 miles) |
+|Booking Time | Last minute booker (< 7 days), Early booker (7-60 days), Moderate early booker (60-180 days), Super early booker (> 180 days) |
+|Cancellation| Same-Day Cancellers, Last-Minute Cancellers (1-7 days), Moderate Cancellers (8-30 days), Early Cancellers (30+ days), No Cancellation|
+|Travel Party | Solo traveler, Family/Group taveler, Solo and group traveler |
+|Family | married, children, not married, children, married, no children, not married, no children|
+ 
 **4. Additional Calculations and data changes**
    - re-calculation of the nights spent in a hotel without taking into consideration the time
      NULL values only for cancellation sessions nd hotel_booked = false
@@ -85,43 +59,6 @@ Metrics used for building the groups: session behaviour, trip behaviour, demogra
    - travel_party: 100 --> group/family
                      1 --> solo
    - avg_distance_miles using longitude and latitude information of home and destination airport and applying the Harvesine formula
-*segments used:*
-     - *segment_age_group*
-            - 16-24
-            - 25-34
-            - 35-44
-            - 45-54
-            - 55-64
-            - 65
-     - *segment_travel_frequency*
-            - frequent traveler (>= 5 bookings)
-            - casual traveler
-     - *segment_spend*
-            - High spender, if total avg_cost > 7000 USD
-     - *segment_flight_distance*
-            - hort-haul-flyer (avg < 500 miles)
-            - medium-haul-flyer (avg 500-2500 miles)
-            - long-haul-flyer (avg > 2500 miles)
-     - *segment_booking_time*
-            - Last minute booker (< 7 days)
-            - Early booker (7-60 days)
-            - Moderate early booker (60-180 days)
-            - Super early booker (> 180 days)
-     - *segment_cancellation*
-            - Same-Day Cancellers
-            - Last-Minute Cancellers (1-7 days)
-            - Moderate Cancellers (8-30 days)
-            - Early Cancellers (30+ days)
-            - No Cancellation
-    - *segment_travel_party*
-            - Solo traveler
-            - Family/Group taveler
-            - Solo and group traveler
-    - *segment_family* calculated from married and has_children
-            - married, children
-            - not married, children
-            - married, no children
-            - not married, no children
 
  **5. Decision Tree and Customer Group Assignment**
 
