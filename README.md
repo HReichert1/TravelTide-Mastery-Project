@@ -536,7 +536,23 @@ user_based_perk as (
 [CSV file](https://drive.google.com/file/d/14r9UaHGrXYPqc8P2kjkjBbUzifPrAMW6/view?usp=drive_link)
 
 
+# Tableau Story
+
+![image](https://github.com/user-attachments/assets/003ad32f-1083-438c-aa3c-6e6700f208e8)
+
+![image](https://github.com/user-attachments/assets/d612debf-f89c-4bd1-ae04-6055b9269f60)
+
+![image](https://github.com/user-attachments/assets/5fc1e6bf-b6b1-4854-b8a1-291a7d02cf84)
+
+![image](https://github.com/user-attachments/assets/2a260750-bc7d-44b8-8d49-c481ec8a85d1)
+
+![image](https://github.com/user-attachments/assets/37e57d18-4b7e-454a-888a-ef71e8987246)
 
 
+[Tableau Story](https://public.tableau.com/views/travel_tide_17442874793520/TravelTide?:language=de-DE&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+
+# Presentation to Stakeholder
+[Presentation](https://docs.google.com/presentation/d/1QgCkBZPfovRkMWez5Jpcev2WtdXy5aZsUJjhA8_PfR0/edit?usp=sharing)
 
 
