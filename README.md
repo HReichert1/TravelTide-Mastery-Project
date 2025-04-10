@@ -31,6 +31,7 @@ Metrics used for building the groups: session behaviour, trip behaviour, demogra
 
 **Rule Set for User Group Creation**
 
+
 *segments used:*
      - *segment_age_group*
             - 16-24
@@ -59,7 +60,7 @@ Metrics used for building the groups: session behaviour, trip behaviour, demogra
             - Moderate Cancellers (8-30 days)
             - Early Cancellers (30+ days)
             - No Cancellation
-             - *segment_travel_party*
+    - *segment_travel_party*
             - Solo traveler
             - Family/Group taveler
             - Solo and group traveler
@@ -531,6 +532,9 @@ user_based_perk as (
   
   ;
 ```
+
+[SQL Code](https://docs.google.com/document/d/15wwt-PB1KkH95O2kCVD3K_u083oS493iEzjntF0bhE0/edit?usp=sharing)
+
 
 **CSV file:**
 [CSV file](https://drive.google.com/file/d/14r9UaHGrXYPqc8P2kjkjBbUzifPrAMW6/view?usp=drive_link)
