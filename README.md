@@ -12,27 +12,40 @@ E-booking startup TravelTide is a new player in the online travel industry. It h
 
 # Planning
 
+**The data provided by TravelTide:**
+
+| | flights | hotels | sessions | users |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| Key | trip_id | trip_id | session_id | user_id |
+| dim/fact | fact | fact | fact | dim |
+| | | | | |
+| # columns | 1.901.038 | 1.918.617 | 5.408.063 | 1.020.926 |
+| # rows | 13 | 7 | 13 | 11 |
+
+**- Users:** contains data about users of TravelTide, e.g. demographic data
+
+**- Sessions:** session details, e.g. clicks, sessionID, booking and cancellation information
+
+**- Flights:** flight data, e.g. departure / arrival date, home / destination airport, bags checked in
+
+**- Hotels:** hotel data, e.g. name and location of the hotel, check-in/check-out date, number of rooms, etc.
+
+
+
 **Workflow for assigning an individualized perk**
+
 
 **1. Identification of active users**
 Users with more than 7 sessions since January 4, 2023 
 Reduction of user data from more than 5 million to 5998
 
-**2. Segmentation of customers into groups**
-After analysis: 10 groups have been built
-![image](https://github.com/user-attachments/assets/7b9a328a-8afb-4baf-930a-c9c3d0ae8e73)
-Others include all travelers who could not be assigned to a specific group
-Metrics used for building the groups: session behaviour, trip behaviour, demographics
 
-
-**3. Data exploration and finding groups which can be assigned for a perk**
+**2. Data exploration and finding groups which can be assigned for a perk**
 ![image](https://github.com/user-attachments/assets/e5a58f3f-682f-4f2d-8704-d3c0ddc5c589)
 
 
 **Rule Set for User Group Creation**
 
-
-*segments used:*
 |Segment | Characteristic|
 | ----------- | ----------- |
 |Age Group | 16-24, 25-34, 35-44, 45-54, 55-64, 65+ |
@@ -44,9 +57,9 @@ Metrics used for building the groups: session behaviour, trip behaviour, demogra
 |Travel Party | Solo traveler, Family/Group taveler, Solo and group traveler |
 |Family | married, children, not married, children, married, no children, not married, no children|
  
-**4. Additional Calculations and data changes**
+**3. Additional Calculations and data changes**
    - re-calculation of the nights spent in a hotel without taking into consideration the time
-     NULL values only for cancellation sessions nd hotel_booked = false
+     NULL values only for cancellation sessions and hotel_booked = false
    - age: calculated base on birthdate and session_end
    - time_since_signup: calculated as difference between sign_up_date and session_end
    - duration_stay: calculated in hours either from return_time and departure_time or check_in_time and check_out_time
@@ -58,11 +71,18 @@ Metrics used for building the groups: session behaviour, trip behaviour, demogra
    - avg_days_to_travel: difference of flight departure ot hotel check_in and session_end
    - travel_party: 100 --> group/family
                      1 --> solo
-   - avg_distance_miles using longitude and latitude information of home and destination airport and applying the Harvesine formula
+   - avg_distance_miles using longitude and latitude information of home and destination airport and applying the Haversine formula
 
- **5. Decision Tree and Customer Group Assignment**
+ **4. Decision Tree and Customer Group Assignment**
 
 ![image](https://github.com/user-attachments/assets/4fcddac7-32b6-4678-a4c1-82ec4fb29a0b)
+
+**5. Segmentation of customers into groups**
+After analysis: 10 groups have been built
+![image](https://github.com/user-attachments/assets/7b9a328a-8afb-4baf-930a-c9c3d0ae8e73)
+Others include all travelers who could not be assigned to a specific group
+Metrics used for building the groups: session behaviour, trip behaviour, demographics
+
 
 **6. Perk Assignment**
 | Customer Group | Perk | Why It Matters |
@@ -496,4 +516,12 @@ user_based_perk as (
 # Presentation to Stakeholder
 [Presentation](https://docs.google.com/presentation/d/1QgCkBZPfovRkMWez5Jpcev2WtdXy5aZsUJjhA8_PfR0/edit?usp=sharing)
 
+# Executive Summary
 
+[Executive Summary](https://docs.google.com/document/d/1zVERA5IwYZhsOr8xcXc0y-tpv1fdL6wCm8ueSWph6D0/edit?usp=sharing)
+
+# Travel Tide Mastery Project Report
+[Report](https://docs.google.com/document/d/1Y2R5TLH3XB4gJjTlqzgQA0PzvaPV7CA1Ri1bAJPYiGw/edit?usp=sharing)
+
+# Travel Tide Mastery Project Summary
+[Project Summary](https://docs.google.com/document/d/165Dl032QCXH5DlKOPotp5A4QOVHfNlBmhMeT8VrS3-o/edit?usp=sharing)
