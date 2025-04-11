@@ -525,3 +525,6 @@ user_based_perk as (
 
 # Travel Tide Mastery Project Summary
 [Project Summary](https://docs.google.com/document/d/165Dl032QCXH5DlKOPotp5A4QOVHfNlBmhMeT8VrS3-o/edit?usp=sharing)
+
+# Video
+[Video](https://www.loom.com/share/f541a8f19b6b4d1da20f76c5c3e3b0c5?sid=592324e1-a50d-436f-b69e-44272f4a90dc)
